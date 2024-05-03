@@ -1,17 +1,3 @@
-<?php
-
-$template = '';
-foreach ($hotels as $hotel) {
-    $template .= '<tr>';
-    $template .= '<td>' . $hotel['name'] . '</td>';
-    $template .= '<td>' . $hotel['description'] . '</td>';
-    $template .= '<td>' . $hotel['parking'] . '</td>';
-    $template .= '<td>' . $hotel['vote'] . '</td>';
-    $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-    $template .= '</tr>';
-}
-?>
-
 <table class="table table-striped">
   <thead>
     <tr class="text-uppercase">
@@ -25,7 +11,6 @@ foreach ($hotels as $hotel) {
 
   <tbody>
 
-    <?= $template;
-    ?>
+    <?= $template?>
   </tbody>
 </table>

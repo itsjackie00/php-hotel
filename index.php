@@ -1,7 +1,9 @@
 <?php
 include __DIR__ . '/Models/steam.php';
 
-if (isset($GET['parking'])) {
+if (isset($_GET['parking'])) {
+    $parking = $_GET['parking'];
+    $template = '';
     foreach ($hotels as $hotel) {
         if ($parking == '1') {
             if ($hotel['parking'] == true) {
