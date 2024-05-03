@@ -2,5 +2,6 @@
 include __DIR__ . '/Views/header.php';
 ?>
 
-</body>
-</html>
+<?php
+include __DIR__ . '/Views/footer.php';
+?>
