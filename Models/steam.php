@@ -37,5 +37,5 @@ $hotels = [
 ],
 
 ];
-
+var_dump($hotels);
 ?>
