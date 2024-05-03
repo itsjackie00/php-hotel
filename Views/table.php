@@ -1,4 +1,5 @@
 <?php
+
 $template = '';
 foreach ($hotels as $hotel) {
     $template .= '<tr>';
@@ -23,6 +24,8 @@ foreach ($hotels as $hotel) {
   </thead>
 
   <tbody>
-    <?= $template; ?>
+
+    <?= $template;
+    ?>
   </tbody>
 </table>
