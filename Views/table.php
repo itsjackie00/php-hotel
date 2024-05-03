@@ -23,6 +23,6 @@ foreach ($hotels as $hotel) {
   </thead>
 
   <tbody>
-    <?= $tamplate; ?>
+    <?= $template; ?>
   </tbody>
 </table>
