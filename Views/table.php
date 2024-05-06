@@ -11,6 +11,7 @@
 
   <tbody>
 
-    <?= $template?>
+    <?php echo $template;
+    ?>
   </tbody>
 </table>
