@@ -11,7 +11,6 @@
 
   <tbody>
 
-    <?php echo $template;
-    ?>
+    <?php echo $hotel; ?>
   </tbody>
 </table>
