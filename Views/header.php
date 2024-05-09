@@ -19,7 +19,7 @@
         <div class="container d-flex justify-content-end mt-5 mb-5  ">
             <h3 class="text-center">Find your hotel</h3>
             <div>
-                <form action="index.php" method="GET" class="form-check">
+                <form method="GET" class="form-check">
                     <select name="parking" class="form-control">
                         <option value="all">All</option>
                         <option value="1">Parking</option>
@@ -27,7 +27,7 @@
                     </select>
                     <div class="form-group">
                         <label for="vote">Vote</label>
-                        <form action="index.php" method="GET">
+                        <form method="GET">
                             <select class="form-control" name="vote">
                                 <option value="tutti">Tutti</option>
                                 <option value="1">1 stella
@@ -41,9 +41,10 @@
                                 <option value="5">5 stelle
                                 </option>
                             </select>
-                        </form>
+
                     </div>
                     <button type="submit" class="btn btn-primary">Search</button>
+                </form>
                 </form>
             </div>
         </div>
