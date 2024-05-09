@@ -110,69 +110,19 @@ function getHotels($hotels)
                 $template .= '</tr>';
             }
         }
+
+        return $template;
     }
-    return $template;
 }
 
-
-function getHotel($hotels)
+function getVote($hotels)
 {
     if (isset($_GET['vote'])) {
         $vote = $_GET['vote'];
         $template = '';
         foreach ($hotels as $hotel) {
             if ($vote == 'tutti') {
-                if ($hotel['vote'] == true) {
-                    $template .= '<tr>';
-                    $template .= '<td>' . $hotel['name'] . '</td>';
-                    $template .= '<td>' . $hotel['description'] . '</td>';
-                    $template .= '<td>' . $hotel['parking'] . '</td>';
-                    $template .= '<td>' . $hotel['vote'] . '</td>';
-                    $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-                    $template .= '</tr>';
-                }
-            } elseif ($vote == '1') {
-                if ($hotel['vote'] == 1) {
-                    $template .= '<tr>';
-                    $template .= '<td>' . $hotel['name'] . '</td>';
-                    $template .= '<td>' . $hotel['description'] . '</td>';
-                    $template .= '<td>' . $hotel['parking'] . '</td>';
-                    $template .= '<td>' . $hotel['vote'] . '</td>';
-                    $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-                    $template .= '</tr>';
-                }
-            } elseif ($vote == '2') {
-                if ($hotel['vote'] == 2) {
-                    $template .= '<tr>';
-                    $template .= '<td>' . $hotel['name'] . '</td>';
-                    $template .= '<td>' . $hotel['description'] . '</td>';
-                    $template .= '<td>' . $hotel['parking'] . '</td>';
-                    $template .= '<td>' . $hotel['vote'] . '</td>';
-                    $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-                    $template .= '</tr>';
-                }
-            } elseif ($vote == '3') {
-                if ($hotel['vote'] == 3) {
-                    $template .= '<tr>';
-                    $template .= '<td>' . $hotel['name'] . '</td>';
-                    $template .= '<td>' . $hotel['description'] . '</td>';
-                    $template .= '<td>' . $hotel['parking'] . '</td>';
-                    $template .= '<td>' . $hotel['vote'] . '</td>';
-                    $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-                    $template .= '</tr>';
-                }
-            } elseif ($vote == '4') {
-                if ($hotel['vote'] == 4) {
-                    $template .= '<tr>';
-                    $template .= '<td>' . $hotel['name'] . '</td>';
-                    $template .= '<td>' . $hotel['description'] . '</td>';
-                    $template .= '<td>' . $hotel['parking'] . '</td>';
-                    $template .= '<td>' . $hotel['vote'] . '</td>';
-                    $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-                    $template .= '</tr>';
-                }
-            } elseif ($vote == '5') {
-                if ($hotel['vote'] == 5) {
+                if ($hotel['vote'] == 1 || $hotel['vote'] == 2 || $hotel['vote'] == 3 || $hotel['vote'] == 4 || $hotel['vote'] == 5) {
                     $template .= '<tr>';
                     $template .= '<td>' . $hotel['name'] . '</td>';
                     $template .= '<td>' . $hotel['description'] . '</td>';
@@ -182,15 +132,17 @@ function getHotel($hotels)
                     $template .= '</tr>';
                 }
             } else {
-                $template .= '<tr>';
-                $template .= '<td>' . $hotel['name'] . '</td>';
-                $template .= '<td>' . $hotel['description'] . '</td>';
-                $template .= '<td>' . $hotel['parking'] . '</td>';
-                $template .= '<td>' . $hotel['vote'] . '</td>';
-                $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-                $template .= '</tr>';
+                if ($hotel['vote'] == $vote) {
+                    $template .= '<tr>';
+                    $template .= '<td>' . $hotel['name'] . '</td>';
+                    $template .= '<td>' . $hotel['description'] . '</td>';
+                    $template .= '<td>' . $hotel['parking'] . '</td>';
+                    $template .= '<td>' . $hotel['vote'] . '</td>';
+                    $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
+                    $template .= '</tr>';
+                }
             }
         }
+        return $template;
     }
-    return $template;
 }
