@@ -20,15 +20,30 @@
             <h3 class="text-center">Find your hotel</h3>
             <div>
                 <form action="index.php" method="GET" class="form-check">
-                    <select name="parking">
+                    <select name="parking" class="form-control">
                         <option value="all">All</option>
                         <option value="1">Parking</option>
                         <option value="0">No Parking</option>
                     </select>
-                    <form action="index.php" method="GET">
-                        <input type="text">
-                        <button type="submit" class="btn btn-primary">Search</button>
-                    </form>
+                    <div class="form-group">
+                        <label for="vote">Vote</label>
+                        <form action="index.php" method="GET">
+                            <select class="form-control" name="vote">
+                                <option value="tutti">Tutti</option>
+                                <option value="1">1 stella
+                                </option>
+                                <option value="2">2 stelle
+                                </option>
+                                <option value="3">3 stelle
+                                </option>
+                                <option value="4">4 stelle
+                                </option>
+                                <option value="5">5 stelle
+                                </option>
+                            </select>
+                        </form>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
                 </form>
             </div>
         </div>
