@@ -1,41 +1,6 @@
 <?php
-include __DIR__ . '/Models/steam.php';
+include __DIR__ . '/Controllers/steam.php';
 
-if (isset($_GET['parking'])) {
-    $parking = $_GET['parking'];
-    $template = '';
-    foreach ($hotels as $hotel) {
-        if ($parking == '1') {
-            if ($hotel['parking'] == true) {
-                $template .= '<tr>';
-                $template .= '<td>' . $hotel['name'] . '</td>';
-                $template .= '<td>' . $hotel['description'] . '</td>';
-                $template .= '<td>' . $hotel['parking'] . '</td>';
-                $template .= '<td>' . $hotel['vote'] . '</td>';
-                $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-                $template .= '</tr>';
-            }
-        } elseif ($parking == '0') {
-            if ($hotel['parking'] == false) {
-                $template .= '<tr>';
-                $template .= '<td>' . $hotel['name'] . '</td>';
-                $template .= '<td>' . $hotel['description'] . '</td>';
-                $template .= '<td>' . $hotel['parking'] . '</td>';
-                $template .= '<td>' . $hotel['vote'] . '</td>';
-                $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-                $template .= '</tr>';
-            }
-        }else {
-            $template .= '<tr>';
-                $template .= '<td>' . $hotel['name'] . '</td>';
-                $template .= '<td>' . $hotel['description'] . '</td>';
-                $template .= '<td>' . $hotel['parking'] . '</td>';
-                $template .= '<td>' . $hotel['vote'] . '</td>';
-                $template .= '<td>' . $hotel['distance_to_center'] . '</td>';
-                $template .= '</tr>';
-        }
-    }
-}
 ?>
 <?php
 include __DIR__ . '/Views/header.php';
